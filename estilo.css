@@ -1,0 +1,49 @@
+/* Stlyes to make the demo easier to see: */
+html{
+      height: 100%;
+    }
+    
+ body { 
+ background-color: #f2f2f2; 
+  margin: 0; 
+  display: grid;
+  height: 100%;
+  grid-template-areas:
+        "header_section"
+        "Site-content_section"
+        "footer_section";
+  grid-template-rows: 100px 100% 50px; /* 100px for header, 100% for content section, 50px for footer */
+}
+img { 
+background-position: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+	    float: left;
+    display: block;
+    width: 300px;
+    height: 80px;
+    margin-top: 10px;
+}
+
+
+.v-line{
+ border-left: thick solid #000;
+ height:100%;
+ left: 30%;
+ position: absolute;
+}
+ hr{
+ height:10vh;
+ width:.2vw;
+ border-width:0;
+ color:#000;
+ background-color:#000;
+ left: 30%;
+  position: absolute;
+}
+
+
+julian {
+	position: right;
+	Color: #000;
+}
