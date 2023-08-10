@@ -34,10 +34,13 @@
   var map = L.map('map').setView([-34.6998858,-58.3926437], 13);
 
     // Creating a Layer object
-         var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+         var googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}',{ maxZoom: 20, subdomains:['mt0','mt1','mt2','mt3'] });
          
+		 
+		 
+		 
          // Adding layer to the map
-         map.addLayer(layer);
+         map.addLayer(googleSat);
 
 
 
@@ -70,7 +73,7 @@ var latlngs1= [
 
 
 ];
-// Linea 520 Vuelta
+// Linea 520 Vuelta prueba
 latlngs2= [
     [-34.707112, -58.391315],
     [-34.706931, -58.391347],
@@ -83,17 +86,9 @@ latlngs2= [
     [-34.706755, -58.398943]
 ];
 
-
+//prueba
 latlngs3= [
-    [-34.708034, -58.388557],
-    [-34.701683, -58.384416],
-      [-34.706768, -58.391588],
-      [-34.706772, -58.391819],
-     [-34.706786, -58.393021],
-    [-34.706746, -58.393831],
-   [-34.706693, -58.394973],
- [-34.706706, -58.396277],
-    [-34.706755, -58.398943]
+ 
 ];
 
 const polyline1 = L.polyline(latlngs1, {color: 'red'})
@@ -104,9 +99,9 @@ var polyline3 = L.polyline(latlngs3, {color: 'pink'})
 
 var hotlineLayer = L.layerGroup([polyline1, polyline2,polyline3]).addTo(map)
 
-polyline1.bindTooltip("Linea 520 Ida", {permanent: false, direction:"center"})
+polyline1.bindTooltip("<b>Linea 520 Vuelta</b> <br> Empresa Tomas Guido S.A <br> vuelta a Estacion lanús ", {permanent: false, direction:"center"})
 polyline2.bindTooltip("Linea 520 Vuelta", {permanent: false, direction:"center"})
-polyline3.bindTooltip("Linea 520 Vuelta", {permanent: false, direction:"center"})
+polyline3.bindPopup("<b>Linea 520 Vuelta</b> <br> Empresa Tomas Guido S.A <br> vuelta a Estacion lanús ", {permanent: false, direction:"center"})
 
 
 
@@ -115,15 +110,31 @@ polyline3.bindTooltip("Linea 520 Vuelta", {permanent: false, direction:"center"}
 
 //ICONOOOOOOS
 
+var semaforo = L.icon({
+    iconUrl: 'imagenes/muni.png',
+
+
+   iconSize:     [30, 30], // size of the icon
+    shadowSize:   [50, 64], // size of the shadow
+    iconAnchor:   [1, 1], // point of the icon which will correspond to marker's location
+    shadowAnchor: [4, 62],  // the same for the shadow
+    popupAnchor:  [5, 0] // point from which the popup should open relative to the iconAnchor
+});
+
+
+
+
+//semaforos municipales definicion
+
 var greenIcon = L.icon({
-    iconUrl: 'rojo.png',
+    iconUrl: '/imagenes/muni2.png',
 
 
     iconSize:     [38, 95], // size of the icon
     shadowSize:   [50, 64], // size of the shadow
     iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
     shadowAnchor: [4, 62],  // the same for the shadow
-    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+    popupAnchor:  [5, 0] // point from which the popup should open relative to the iconAnchor
 });
 //-------------------------------------------------------------------------
 
@@ -135,20 +146,20 @@ var municipio = L.icon({
     shadowSize:   [50, 64], // size of the shadow
     iconAnchor:   [1, 1], // point of the icon which will correspond to marker's location
     shadowAnchor: [4, 62],  // the same for the shadow
-    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+    popupAnchor:  [5, 0] // point from which the popup should open relative to the iconAnchor
 });
 
 //----------------------------------------------------------------------------
 
 
 
-// Agregamos puntos para ver su funcion
+//municipalidad y estacion lanus
 
 
 
 
 var marker = L.marker([-34.6995977,-58.3932766],{icon: municipio}).addTo(map);
-marker.bindPopup("<b>Lanús Municipio</b><br>Cada vez un poco mejor").openPopup();
+marker.bindPopup("<b>Lanús Municipio</b><br>Cada dia un poco mejor").openPopup();
 
 
 var marker = L.marker([-34.70731, -58.39124]) .addTo(map);
@@ -156,7 +167,8 @@ marker.bindPopup("<b>Estación Lanus</b><br>Estación de Trenes").openPopup();
 
 
 
-
+var marker = L.marker([-34.708191, -58.391761],{icon: semaforo}).addTo(map);
+marker.bindPopup("<b>Hipolito Yrigoyen y 25 de Mayo</b><br>Cada dia un poco mejor <br> instalado por el Municipio de Lanus <br> F6 - TecnoTrans ").openPopup();
 
 
 //FUNCION PARA VER EL PUNTO GEOLOCALIZACION
