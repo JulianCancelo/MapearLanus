@@ -199,20 +199,6 @@ var cities = L.layerGroup();
 		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 	});
 
-	var map = L.map('map', {
-		center: [39.73, -104.99],
-		zoom: 10,
-		layers: [osm, cities]
-	});
-
-	var baseLayers = {
-		'OpenStreetMap': osm,
-		'Streets': streets
-	};
-
-	var overlays = {
-		'Cities': cities
-	};
 
 
 
