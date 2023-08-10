@@ -1,11 +1,13 @@
 /* Stlyes to make the demo easier to see: */
 html{
       height: 100%;
+	  overflow: hidden;
     }
     
  body { 
 
   height: 100%;
+	 
   overflow: hidden;
  background-color: #f2f2f2; 
   margin: 0; 
