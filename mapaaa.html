@@ -216,17 +216,25 @@ map.on('click', onMapClick);
 var lineas = L.layerGroup([polyline1, polyline2, polyline3]);
 
 
+const polyline1 = L.polyline(tecnotrans, {color: 'red'})
 
 
 
+var ecnotrans =L.layerGroup([tecnotrans]).addTo(map)
+
+tecnotrans= [
+    [-34.707112, -58.391315],
+    [-34.706931, -58.391347],
+      [-34.706768, -58.391588],
+      [-34.706772, -58.391819],
+     [-34.706786, -58.393021],
+    [-34.706746, -58.393831],
+   [-34.706693, -58.394973],
+ [-34.706706, -58.396277],
+    [-34.706755, -58.398943]
+];
 
 
-
-
-
-
-
-;
 
 
 
