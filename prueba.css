@@ -1,0 +1,89 @@
+
+
+
+body {
+    width: 100%;
+    margin: 0 auto;
+    background-image: url();
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+
+html {
+  font-size: 10px; /* px quiere decir 'píxeles': el tamaño de la fuente base es ahora de 10 píxeles de altura */
+  font-family: "Open Sans", sans-serif; /* Este debe ser el resto del resultado que obtuviste de Google fonts */
+}
+
+
+p {
+
+color : red ;
+
+
+
+}
+
+
+h1 {
+  margin: 0;
+  padding: 20px 0;
+  color: ;
+  text-shadow: 3px 3px 1px black;
+  font-size: 60 px;
+}
+
+
+img { 
+background-position: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+	    float: left;
+    display: block;
+    width: 20x;
+    height: 80px;
+    margin-top: 10px;
+}
+
+
+.header_logo {
+  display: block;
+  margin-left: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+.header {
+    position:fixed;
+	width: 100%;
+	height: 100px;
+	background-color: #96305A;
+	text-align : center;
+	top: 0;
+	  }
+	  
+	  
+	  
+   .container {
+     margin-top: 50px;
+   }
+
+
+
+   button {
+
+ width: : 100%;
+ height:  100px;
+
+ margin-right: 10px;
+
+   }
+   
+.space {
+  width: 4px;
+  height: auto;
+  display: inline-block;
+}
