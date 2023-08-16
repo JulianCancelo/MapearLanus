@@ -98,7 +98,13 @@ var latlngs1= [
 [-34.68423, -58.439798],
 [-34.686025, -58.439391],
 [-34.685099, -58.437331],
-[-34.686846, -58.436043]
+[-34.686846, -58.436043],
+[-34.687335, -58.435716],
+[-34.690261, -58.433641],
+[-34.691257, -58.435638],
+[-34.692258, -58.434882],
+[-34.693085, -58.436566],
+[-34.693155, -58.436647]
 
 
 
@@ -129,7 +135,7 @@ var polyline3 = L.polyline(latlngs3, {color: 'pink'})
 
 var hotlineLayer = L.layerGroup([polyline1, polyline2,polyline3]).addTo(map)
 
-polyline1.bindTooltip("<b>Linea 520 Vuelta</b> <br> Empresa Tomas Guido S.A <br> vuelta a Estacion lanús ", {permanent: false, direction:"center"})
+polyline1.bindTooltip("<b>Linea 520 Vuelta Ramal B</b> <br> Empresa Tomas Guido S.A <br> vuelta a Estacion lanús ", {permanent: false, direction:"center"})
 polyline2.bindTooltip("Linea 520 Vuelta", {permanent: false, direction:"center"})
 polyline3.bindPopup("<b>Linea 520 Vuelta</b> <br> Empresa Tomas Guido S.A <br> vuelta a Estacion lanús ", {permanent: false, direction:"center"})
 
